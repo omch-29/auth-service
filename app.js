@@ -4,6 +4,7 @@ import { signup, login } from "./controller/auc.js";
 const app = express();
 app.use(express.json());
 const MONGO_URI = "mongodb://127.0.0.1:27017/as";
+
 app.post("/signup", signup);
 app.post("/login", login);
 app.get('/', (req, res) => res.json({ status: 'auth-service up' }));
